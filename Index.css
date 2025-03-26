@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        cyan 0%,
+        cyan 25%,
+        turquoise 25%,
+        turquoise 50%,
+        cyan 50%,
+        cyan 75%,
+        turquoise  75%,
+        turquoise  100%
+    );
+}
+.page-title {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 30px;
+    font-size: 52px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1.5px;
+}
+.about-heading {
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    text-align: center;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.page-title {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.nav-section {
+    animation: slideIn 1s ease-out;
+}
+
+.welcome-section {
+    animation: fadeIn 2s ease-in;
+}
+
+.article-grid {
+    animation: slideIn 1.5s ease-out;
+}
+
+.help-section button {
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.help-section button:hover {
+    transform: scale(1.1);
+}
+
+article {
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+h2 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: textShadow 2s infinite alternate;
+}
+
+p {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    animation: textFade 1.5s ease-in;
+}
+
+h3 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    animation: textFloat 2s infinite alternate;
+}
+
+article {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: colorChange 5s infinite alternate;
+}
+
+article:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+button {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: buttonGlow 2s infinite alternate;
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes textShadow {
+    from {text-shadow: 2px 2px 4px rgba(0,0,0,0.2);}
+    to {text-shadow: 4px 4px 8px rgba(0,0,0,0.3);}
+}
+
+@keyframes textFade {
+    from {opacity: 0; text-shadow: none;}
+    to {opacity: 1; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);}
+}
+
+@keyframes textFloat {
+    from {transform: translateY(0); text-shadow: 1px 1px 3px rgba(0,0,0,0.15);}
+    to {transform: translateY(-5px); text-shadow: 3px 3px 5px rgba(0,0,0,0.2);}
+}
+
+@keyframes colorChange {
+    0% {background-color: #ffffff;}
+    50% {background-color: #f0f8ff;}
+    100% {background-color: #e6f3ff;}
+}
+
+@keyframes buttonGlow {
+    from {background-color: #000000;}
+    to {background-color: #333333;}
+}
